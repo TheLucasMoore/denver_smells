@@ -1,25 +1,24 @@
-# denver-smells
+# README
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 4.1.2.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Getting Started
+Things you may want to cover:
 
-### Prerequisites
+* Ruby version
 
-- [Git](https://git-scm.com/)
-- [Node.js and npm](nodejs.org) Node >= 4.x.x, npm >= 2.x.x
-- [Gulp](http://gulpjs.com/) (`npm install --global gulp`)
+* System dependencies
 
-### Developing
+* Configuration
 
-1. Run `npm install` to install server dependencies.
+* Database creation
 
-2. Run `gulp serve` to start the development server. It should automatically open the client in your browser when ready.
+* Database initialization
 
-## Build & development
+* How to run the test suite
 
-Run `gulp build` for building and `gulp serve` for preview.
+* Services (job queues, cache servers, search engines, etc.)
 
-## Testing
+* Deployment instructions
 
-Running `npm test` will run the unit tests with karma.
+* ...
