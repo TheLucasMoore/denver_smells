@@ -1,3 +1,17 @@
-<h1><%= @city.name %> smells</h1>
+<h1>Currently in <%= @city.name %>:</h1>
 
-<%= @weather.wind_dir %>
+<h2>
+It's <%= @weather.description %>, <%= @weather.temperature %> degrees, and
+<% if @stink_report %>
+  probably smells like dog food.
+<% else %>
+  shouldn't stink too badly.
+<% end %>
+</h2>
+
+<h1>Conditions</h1>
+
+Wind: <%= @weather.wind_description %><br>
+Direction: <%= @weather.wind_dir %><br>
+Speed: <%= @weather.wind_mph %> mph<br>
+Gusts: <%= @weather.wind_gust_mph %> mph

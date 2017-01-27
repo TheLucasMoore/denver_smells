@@ -28,10 +28,9 @@ class ReportJob < ActiveJob::Base
     report.wind_dir = weather_info['wind_dir']
     report.wind_mph = weather_info['wind_mph']
     report.wind_gust_mph = weather_info['wind_gust_mph']
-    report.wind_description = weather_info['wind_string']
+    report.wind_description = weather_info['wind_string'].downcase
     report.temperature = weather_info['temp_f']
-    report.description = weather_info['weather']
+    report.description = weather_info['weather'].downcase
     report.save!
-
   end
 end
