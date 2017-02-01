@@ -1,3 +1,3 @@
 class Report < ApplicationRecord
-  belongs_to :city
+  belongs_to :neighborhood
 end
