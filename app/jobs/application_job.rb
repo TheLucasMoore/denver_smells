@@ -13,11 +13,13 @@ class ApplicationJob < ActiveJob::Base
 
       report.neighborhood = Neighborhood.find_by(name: "#{key}")
       report.wind_dir = weather_info['wind_dir']
-      report.wind_mph = weather_info['wind_mph']
       report.wind_gust_mph = weather_info['wind_gust_mph']
       report.wind_description = weather_info['wind_string'].downcase
       report.temperature = weather_info['temp_f']
       report.description = weather_info['weather'].downcase
+
+      # some results are -9999, so catch them as zero
+      weather_info['wind_mph'] >= 0 ? report.wind_mph = weather_info['wind_mph'] : report.wind_mph = 0
       report.save!
     end
   end

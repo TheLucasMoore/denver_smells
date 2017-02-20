@@ -4,7 +4,9 @@
 <% @neighborhoods.each do |neighborhood| %>
   <li><h3><%= neighborhood.name %></h3></li>
   <ul>
-    <li><%= neighborhood.most_recent_weather_report %></li>
+    <li>Wind Speed: <%= neighborhood.reports.last.wind_mph %></li>
+    <li>Wind Gust Speed: <%= neighborhood.reports.last.wind_gust_mph %></li>
+    <li>Wind Direction: <%= neighborhood.reports.last.wind_dir %></li>
   </ul>
 <% end %>
 </ul>
