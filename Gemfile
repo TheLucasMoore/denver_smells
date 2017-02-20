@@ -32,8 +32,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'wunderground'
-gem 'crono'
-gem 'sinatra', '2.0.0.beta2', require: nil # oddly required for crono
 gem 'figaro'
 
 group :development, :test do
