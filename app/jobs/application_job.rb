@@ -1,4 +1,5 @@
 class ApplicationJob < ActiveJob::Base
+  include StinkyAlgorithm
   PWS_CODES = Hash['Capitol Hill', 'KCODENVE145', 'Cheesman Park', 'KCODENVE206', 'San Rafael Neighborhood', 'KCODENVE131', 'Ballpark', 'KCODENVE187', 'Larimer', 'KCODENVE189', 'Congress Park', 'KCODENVE271', 'Highlands', 'KCODENVE208']
 
   def perform
@@ -17,7 +18,7 @@ class ApplicationJob < ActiveJob::Base
       report.wind_description = weather_info['wind_string'].downcase
       report.temperature = weather_info['temp_f']
       report.description = weather_info['weather'].downcase
-
+      report.smell_rating = does_it_smell?(weather_info)
       # some results are -9999, so catch them as zero
       weather_info['wind_mph'] >= 0 ? report.wind_mph = weather_info['wind_mph'] : report.wind_mph = 0
       report.save!
