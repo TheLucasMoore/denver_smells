@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  latitude: MyString
+  longitude: MyString
+  description: MyString
+  user_id: 1
+  smell_intensity: 1.5
+
+two:
+  latitude: MyString
+  longitude: MyString
+  description: MyString
+  user_id: 1
+  smell_intensity: 1.5

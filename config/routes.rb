@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   scope module: :api do
      scope module: :v1 do
       # resouces :users, path: "/api/v1/users"
-      # resouces :user_reports, path: "/api/v1/user_reports"
+      resources :user_reports, path: "/api/v1/user_reports/"
       resources :neighborhood_reports, only: :index, path: "/api/v1/neighborhood_reports"
       resources :neighborhoods, only: [:index, :show], path: "/api/v1/neighborhoods" do
         resources :reports, only: [:index, :show]
