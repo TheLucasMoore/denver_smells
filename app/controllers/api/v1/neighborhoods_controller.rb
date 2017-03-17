@@ -1,6 +1,6 @@
 module Api
   module V1
-    class NeighborhoodsController < ApplicationController
+    class NeighborhoodsController < ApiController
 
       def index
         @neighborhoods = Neighborhood.all

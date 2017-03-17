@@ -1,6 +1,6 @@
 module Api
   module V1
-    class ReportsController < ApplicationController
+    class ReportsController < ApiController
 
       def index
         @neighborhood = Neighborhood.find(params[:neighborhood_id])

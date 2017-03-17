@@ -1,6 +1,6 @@
 module Api
   module V1
-    class NeighborhoodReportsController < ApplicationController
+    class NeighborhoodReportsController < ApiController
       def index
         @last_report = {}
         n = Neighborhood.all
